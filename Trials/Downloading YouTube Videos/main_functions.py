@@ -30,10 +30,3 @@ def get_video_links():
             print('Well noted.')
             break
     return links
-
-open_download_pages(get_video_links())
-
-
-
-
-
