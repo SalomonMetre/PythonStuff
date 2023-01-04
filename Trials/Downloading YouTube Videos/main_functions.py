@@ -30,3 +30,13 @@ def get_video_links():
             print('Well noted.')
             break
     return links
+
+def download_from_text_file_links(path):
+    try:
+        with open(path,'r') as file_handler:
+            links=file_handler.readlines()
+        for link in links:
+            initiate_download(get_y2mate_download_link(link.strip()))
+    except FileNotFoundError:
+        print('File does not exist')
+    
