@@ -2,7 +2,7 @@
 import webbrowser as wb
 
 def initiate_download(link):
-    wb.open(link,1)
+    wb.open(link,0)
 
 def get_y2mate_download_link(yt_link):
     if yt_link.__contains__('youtube.com'):
