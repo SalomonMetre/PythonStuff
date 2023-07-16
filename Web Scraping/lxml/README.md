@@ -5,7 +5,7 @@ When you go to https://en.wikipedia.org/wiki/Main_Page, there is a section calle
 ### What are the requirements?
 - Platform: Linux
 - Python2 or Python3 interpreter
-- Install the notify2 module
+- Install the notify2 package
 
 ### One cool thing (not the only one!) you can do with this program
 - Add #![path/to/your/python/interpreter] at the beginning of the program wiki_main_page.py, e.g., #!/usr/bin/python3.
