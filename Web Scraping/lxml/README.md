@@ -15,7 +15,9 @@ e.g. #!/usr/bin/python3
 4. Receive the latest news from Wikipedia as soon as you log into your computer !
 
 ### Simple screenshot
-<img scr="demo.png" width="50%" height="50%">
+<p align="left">
+    <img src="demo.png" width="50%" height="50%">
+</p>
 
 ### What is underway ?
 A similar implementation for Windows. 
