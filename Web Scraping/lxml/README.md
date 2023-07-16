@@ -14,6 +14,9 @@ e.g. #!/usr/bin/python3
 3. Add the program to your startup programs
 4. Receive the latest news from Wikipedia as soon as you log into your computer !
 
+### Simple screenshot
+<img scr="demo.png" width="50%" height="50%">
+
 ### What is underway ?
 A similar implementation for Windows. 
 Stay tuned !!
