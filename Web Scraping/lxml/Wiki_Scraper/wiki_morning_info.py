@@ -3,6 +3,7 @@ import lxml.html as lxht
 from time import sleep
 import notify2
 
+NOTIFICATION_TIME = 1
 notify2.init("App Name")
 
 def show_notification(title, message, icon):
@@ -25,7 +26,7 @@ def show_news():
     news_list = news.xpath('.//li')
 
     for news in news_list:
-        sleep(5)
+        sleep(NOTIFICATION_TIME)
         show_notification(notification_title, news.text_content(), news_icon)
 
 def show_featured_article():
@@ -47,7 +48,7 @@ def show_featured_article():
     # Iterates throught the text and displays each portion as a notification
     start = 0
     while(start<num_words):
-        sleep(5)
+        sleep(NOTIFICATION_TIME)
         show_notification(title, ' '.join(message_parts[start:start+40]), featured_article_icon)
         start += 40
         
@@ -64,7 +65,7 @@ def show_did_you_know():
     items = container.xpath('.//ul')[0].xpath('./li')
     
     for item in items:
-        sleep(5)
+        sleep(NOTIFICATION_TIME)
         show_notification(title,item.text_content(), show_did_you_know_icon)
 
 def show_on_this_day():
@@ -80,7 +81,7 @@ def show_on_this_day():
     items = container.xpath('.//ul')[0].xpath('./li')
     
     for item in items:
-        sleep(5)
+        sleep(NOTIFICATION_TIME)
         show_notification(title,item.text_content(), show_did_you_know_icon)
 
 def show_featured_person():
@@ -99,7 +100,7 @@ def show_featured_person():
     num_words = len(text_parts)
     start = 0
     while(start<num_words):
-        sleep(5)
+        sleep(NOTIFICATION_TIME)
         show_notification(title, ' '.join(text_parts[start:start+40]), featured_person_icon)
         start += 40
 
