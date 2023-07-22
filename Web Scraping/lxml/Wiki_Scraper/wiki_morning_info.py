@@ -45,7 +45,10 @@ def show_featured_article():
     # Retrieves the html content, and scrapes it using the div tag and the id attribute then splits the text 
     raw_html = rq.get('https://en.wikipedia.org/wiki/Main_Page')
     doc = lxht.fromstring(raw_html.content)
-    news = doc.xpath('//div[@id="mp-tfa"]/p')[0]
+    try:
+       news = doc.xpath('//div[@id="mp-tfa"]/p')[0]
+    except:
+        news = doc.xpath('//div[@id="mp-tfa"]')[0]
     message = news.text_content().split('\n')[0]
     message_parts = message.split(' ')
     num_words = len(message_parts)
